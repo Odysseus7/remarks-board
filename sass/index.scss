@@ -1,10 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap');
 
 *:before,
 *:after,
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
@@ -25,19 +26,82 @@ body {
 
 .wave {
     width: 100%;
+    margin-bottom: 5rem;
 }
 
 main {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
 }
 
 .form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    & > *:not(:first-child) {
+        width: 70%;
+    }
+
     &__heading {
         font-weight: 700;
         text-transform: uppercase;
         font-size: 1.4rem;
+        margin-bottom: 2.5rem;
+        width: 100%;
+    }
+
+    input {
+        background-color: #212121;
+        padding: .5rem 0;
+        padding-left: .8rem;
+        border: 1px solid #212121;
+        border-radius: 4px;
+
+        &:hover {
+            background-color: #3d3d3d;
+        }
+    }
+
+    &__remarks, &__house-number {
+        display: flex;
+        flex-direction: column;
+        label {
+            text-transform: uppercase;
+            font-weight: 500;
+            letter-spacing: 2px;
+            font-size: .9rem;
+            margin: .5rem 0;
+        }
+
+        label:last-of-type {
+            margin-top: .7rem;
+        }
+    }
+
+    &__remark {
+        width: 100%;
+    }
+
+    &__number {
+        width: 40%;
+        margin-bottom: 1rem;
+    }
+
+    .btn-submit {
+        width: 70%;
+        background: linear-gradient(to right, #00B4DB, #0083B0);
+        padding: .6rem 0;
+        color: #fff;
+        text-transform: uppercase;
+        font-weight: 500;
+        font-size: .7rem;
+        letter-spacing: 2.5px;
+
+        &:hover {
+            background: linear-gradient(to right, #00B4DB, #FFFDE4);
+        }
     }
 }
 
