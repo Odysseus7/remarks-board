@@ -1,0 +1,15 @@
+{
+  "name": "opmerkingen",
+  "version": "1.0.0",
+  "description": "Commentboard",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile": "sass --watch sass/index.scss css/index.css"
+  },
+  "author": "Chalita Ndunu",
+  "license": "ISC",
+  "dependencies": {
+    "dart-sass": "^1.25.0"
+  }
+}
