@@ -10,8 +10,49 @@
 body {
     background-color: #181818;
     color: #ffffff;
+    font-family: 'Montserrat', 'sans-serif';
+    font-weight: 400;
+}
+
+.container {
+    position: relative;
+    min-height: 100vh;
+}
+
+.content-wrap {
+    padding-bottom: 2.5rem; // footer height
 }
 
 .wave {
     width: 100%;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form {
+    &__heading {
+        font-weight: 700;
+        text-transform: uppercase;
+        font-size: 1.4rem;
+    }
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    margin-top: 4rem;
+    color: #444444;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: .55rem;
+    letter-spacing: 3px;
+
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 2.5rem; 
 }
