@@ -70,6 +70,7 @@ main {
   letter-spacing: 2px;
   font-size: 0.9rem;
   margin: 0.5rem 0;
+  font-size: 0.7rem;
 }
 .form__remarks label:last-of-type, .form__house-number label:last-of-type {
   margin-top: 0.7rem;
@@ -93,6 +94,36 @@ main {
 }
 .form .btn-submit:hover {
   background: linear-gradient(to right, #00B4DB, #FFFDE4);
+}
+
+.remarks {
+  margin-top: 5rem;
+  width: 100%;
+}
+.remarks__remark {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 1.5rem;
+  width: 100%;
+}
+.remarks__remark:nth-of-type(odd) {
+  background-color: #212121;
+}
+.remarks__number {
+  color: #838383;
+}
+.remarks__paragraph {
+  margin-top: 1rem;
+  font-size: 0.95rem;
+  font-weight: 400;
+}
+.remarks__time {
+  color: #595959;
+  display: block;
+  font-weight: 300;
+  margin-top: 0.7rem;
+  font-size: 0.85rem;
 }
 
 footer {
