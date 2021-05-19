@@ -31,9 +31,16 @@ document.querySelector(".form").addEventListener("submit", (event) => {
     })
     .then((docRef) => {
         window.alert("Remark succesfully posted");
-        window.location.reload();
+
+        document.querySelector(".remarks").insertAdjacentHTML("afterbegin", `
+                <article class="remarks__remark">
+                    <h2 class="remarks__number">${number}</h2>
+                    <p class="remarks__paragraph">${remark}<span class="remarks__time">${new Date(time).toLocaleTimeString('nl-NL')}</span></p>
+                </article>
+            `);
     })
     .catch((error) => {
         window.alert("Something went wrong.");
+        console.log(error);
     });
 });
