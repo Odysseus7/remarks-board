@@ -99,6 +99,7 @@ main {
 .remarks {
   margin-top: 5rem;
   width: 100%;
+  margin-bottom: 4rem;
 }
 .remarks__remark {
   display: flex;
@@ -117,6 +118,7 @@ main {
   margin-top: 1rem;
   font-size: 0.95rem;
   font-weight: 400;
+  text-align: center;
 }
 .remarks__time {
   color: #595959;
@@ -124,6 +126,7 @@ main {
   font-weight: 300;
   margin-top: 0.7rem;
   font-size: 0.85rem;
+  text-align: center;
 }
 
 footer {

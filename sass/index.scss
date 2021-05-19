@@ -109,6 +109,7 @@ main {
 .remarks {
     margin-top: 5rem;
     width: 100%;
+    margin-bottom: 4rem;
     &__remark {
         display: flex;
         flex-direction: column;
@@ -130,6 +131,7 @@ main {
         margin-top: 1rem;
         font-size: .95rem;
         font-weight: 400;
+        text-align: center;
     }
 
     &__time {
@@ -138,6 +140,7 @@ main {
         font-weight: 300;
         margin-top: .7rem;
         font-size: .85rem;
+        text-align: center;
     }
 }
 

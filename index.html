@@ -18,20 +18,16 @@
                     <h1 class="form__heading">Plaats een opmerking</h1>
                     <section class="form__remarks">
                         <label for="form__remark">Opmerking</label>
-                        <input type="text" class="form__remark" id="form__remark" placeholder="Hier typen..">
+                        <input type="text" class="form__remark" id="form__remark" placeholder="Hier typen.." required>
                     </section>
                     <section class="form__house-number">
                         <label for="form__number">Huisnummer</label>
-                        <input type="number" step="2" class="form__number" id="form__number" placeholder="604">
+                        <input type="number" min="594" max="640" step="2" class="form__number" id="form__number" placeholder="604" required>
                     </section>
                     <input type="submit" class="btn-submit" value="Verstuur">
                 </form>
         
                 <section class="remarks">
-                    <article class="remarks__remark">
-                        <h2 class="remarks__number">604</h2>
-                        <p class="remarks__paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, tenetur! <span class="remarks__time">21:45</span></p>
-                    </article>
 
                 </section>
             </main>
