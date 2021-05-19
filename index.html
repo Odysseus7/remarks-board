@@ -22,7 +22,7 @@
                     </section>
                     <section class="form__house-number">
                         <label for="form__number">Huisnummer</label>
-                        <input type="text" class="form__number" id="form__number" placeholder="604">
+                        <input type="number" step="2" class="form__number" id="form__number" placeholder="604">
                     </section>
                     <input type="submit" class="btn-submit" value="Verstuur">
                 </form>
@@ -41,7 +41,32 @@
             copyright &copy; 2021, Chalita Ndunu
         </footer>
     </div>
-    
 
+        <!-- Insert these scripts at the bottom of the HTML, but before you use any Firebase services -->
+      
+        <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+        <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-app.js"></script>
+      
+        <!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
+        <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-analytics.js"></script>
+      
+        <!-- Add Firebase products that you want to use -->
+        <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-firestore.js"></script>
+      
+    <script>
+        const firebaseConfig = {
+    apiKey: "AIzaSyDs6I5Me_Y3SG7QebjSn6VsPnAXxhPuJ5c",
+    authDomain: "remarks-board.firebaseapp.com",
+    projectId: "remarks-board",
+    storageBucket: "remarks-board.appspot.com",
+    messagingSenderId: "680291276621",
+    appId: "1:680291276621:web:344dba245783a5510c0904"
+  };
+  
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+    </script>
+    <script src="js/index.js" type="module"></script>
 </body>
 </html>
