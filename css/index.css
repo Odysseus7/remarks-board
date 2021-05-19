@@ -24,7 +24,9 @@ body {
 }
 
 .wave {
+  margin-top: 0;
   width: 100%;
+  height: auto;
   margin-bottom: 5rem;
 }
 
@@ -152,12 +154,45 @@ footer {
   color: #444444;
   font-weight: 700;
   text-transform: uppercase;
-  font-size: 0.55rem;
+  font-size: 0.65rem;
   letter-spacing: 3px;
   position: absolute;
   bottom: 0;
   width: 100%;
   height: 2.5rem;
+}
+
+@media screen and (min-width: 600px) {
+  .form > *:not(:first-child) {
+    width: 85%;
+  }
+}
+@media screen and (min-width: 800px) {
+  .wave {
+    margin-bottom: 2rem;
+  }
+
+  .form > *:not(:first-child) {
+    width: 100%;
+  }
+
+  footer {
+    font-size: 0.8rem;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .form {
+    width: 60%;
+  }
+  .form__remarks label, .form__house-number label {
+    font-size: 1rem;
+  }
+}
+@media screen and (min-width: 1800px) {
+  .wave {
+    height: 60%;
+    margin-top: -7rem;
+  }
 }
 
 /*# sourceMappingURL=index.css.map */
