@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
     <link rel="stylesheet" href="css/index.css">
     <title>Opmerkingen</title>
 </head>
@@ -18,7 +22,10 @@
                     <h1 class="form__heading">Plaats een opmerking</h1>
                     <section class="form__remarks">
                         <label for="form__remark">Opmerking</label>
-                        <input type="text" class="form__remark" id="form__remark" placeholder="Hier typen.." required>
+                        <!-- <textarea class="form__remark" id="form__remark" placeholder="Hier typen.." required> -->
+                        <textarea id="form__remark" class="form__remark" name="w3review" rows="4" cols="50">
+                            hier typen..
+                        </textarea>
                     </section>
                     <section class="form__house-number">
                         <label for="form__number">Huisnummer</label>
@@ -27,7 +34,7 @@
                     <input type="submit" class="btn-submit" value="Verstuur">
                 </form>
         
-                <section class="remarks">
+                <section class="remarks animate__animated animate__bounceIn">
 
                 </section>
             </main>

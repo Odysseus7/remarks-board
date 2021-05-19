@@ -33,7 +33,7 @@ document.querySelector(".form").addEventListener("submit", (event) => {
         window.alert("Remark succesfully posted");
 
         document.querySelector(".remarks").insertAdjacentHTML("afterbegin", `
-                <article class="remarks__remark">
+                <article class="remarks__remark animate__animated animate__fadeInUpBig">
                     <h2 class="remarks__number">${number}</h2>
                     <p class="remarks__paragraph">${remark}<span class="remarks__time">${new Date(time).toLocaleTimeString('nl-NL')}</span></p>
                 </article>
