@@ -50,6 +50,20 @@ main {
         font-size: 1.4rem;
         margin-bottom: 2.5rem;
         width: 100%;
+        text-align: center;
+    }
+
+    input, textarea {
+        color: #838383;
+        font-family: 'Montserrat', sans-serif;
+        &:hover {
+            background-color: #3d3d3d;
+        }
+
+        &:focus {
+            border-color: #0083B0;
+            outline-color: #00B4DB;
+        }
     }
 
     input {
@@ -59,9 +73,7 @@ main {
         border: 1px solid #212121;
         border-radius: 4px;
 
-        &:hover {
-            background-color: #3d3d3d;
-        }
+        
     }
 
     &__remarks, &__house-number {
@@ -83,6 +95,13 @@ main {
 
     &__remark {
         width: 100%;
+        resize: none;
+        border: 1px solid #212121;
+        border-radius: 4px;
+        background-color: #212121;
+        text-align:left;
+        color: #838383;
+        padding: 1rem 1.5rem;
     }
 
     &__number {

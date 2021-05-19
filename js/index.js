@@ -1,5 +1,11 @@
 const db = firebase.firestore();
 
+const minNumber = 598;
+const maxNumber = 640;
+const steps = 2;
+const remarkInput = document.querySelector(".form__remark");
+const numberInput = document.querySelector(".form__number");
+
 window.onload = () => {
     db.collection("remarks").orderBy("time", "desc").get().then((querySnapshot) => {
         querySnapshot.forEach((doc) => {
@@ -20,27 +26,32 @@ window.onload = () => {
 document.querySelector(".form").addEventListener("submit", (event) => {
     event.preventDefault();
     const number = document.querySelector(".form__number").value;
-    const remark = document.querySelector(".form__remark").value;
+    const remark = document.querySelector(".form__remark").value.replace(/(<([^>]+)>)/gi, "");
     const time = new Date().getTime();
 
-    // post to database
-    db.collection("remarks").add({
-        number,
-        remark,
-        time
-    })
-    .then((docRef) => {
-        window.alert("Remark succesfully posted");
+    if((number >= minNumber && number <= maxNumber) && parseInt(numberInput.step) == steps) {
+        // post to database
+        db.collection("remarks").add({
+            number,
+            remark,
+            time
+        })
+        .then((docRef) => {
+            window.alert("Remark succesfully posted");
+            remarkInput.value = "";
+            numberInput.value = "";
+            document.querySelector(".remarks").insertAdjacentHTML("afterbegin", `
+                    <article class="remarks__remark animate__animated animate__fadeInUpBig">
+                        <h2 class="remarks__number">${number}</h2>
+                        <p class="remarks__paragraph">${remark}<span class="remarks__time">${new Date(time).toLocaleTimeString('nl-NL')}</span></p>
+                    </article>
+                `);
+        })
+        .catch((error) => {
+            window.alert("Something went wrong.");
+        });
+    } else {
+        window.alert(`Number is not between ${minNumber} and ${maxNumber} or its not an even number.`)
+    }
 
-        document.querySelector(".remarks").insertAdjacentHTML("afterbegin", `
-                <article class="remarks__remark animate__animated animate__fadeInUpBig">
-                    <h2 class="remarks__number">${number}</h2>
-                    <p class="remarks__paragraph">${remark}<span class="remarks__time">${new Date(time).toLocaleTimeString('nl-NL')}</span></p>
-                </article>
-            `);
-    })
-    .catch((error) => {
-        window.alert("Something went wrong.");
-        console.log(error);
-    });
 });
